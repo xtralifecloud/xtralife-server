@@ -9,15 +9,16 @@ module.exports =
 		level: 'debug'
 
 	redis:
-		host: "localhost"
-		port: 6378
+		host: process.env.REDIS_PORT_6379_TCP_ADDR
+		port: process.env.REDIS_PORT_6379_TCP_PORT
 
 	mongodb:
-		url: "mongodb://localhost:27018/?maxPoolSize=5"
+		url: "mongodb://#{process.env.MONGODB_PORT_27017_TCP_ADDR}:#{process.env.MONGODB_PORT_27017_TCP_PORT}/?maxPoolSize=25"
 
 	elastic: (cb)->
 		elastic = require("elasticsearch")
-		client = new elastic.Client()
+		client = new elastic.Client
+			host: "http://#{process.env.ELASTIC_PORT_9200_TCP_ADDR}:#{process.env.ELASTIC_PORT_9200_TCP_PORT}"
 		cb null, client
 
 	mailer: nodemailer.createTransport(sendgrid(

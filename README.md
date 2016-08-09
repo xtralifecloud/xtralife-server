@@ -29,3 +29,11 @@ The configuration file is chosen according to `process.NODE_ENV` and defaults to
 
 note: Batches/hooks are just normal node modules required in the configuration files, to help with source code management.
 
+`docker build -t xtralife/xtralife-server .` to build the Docker image
+
+To run the server with links to the above containers :
+
+`docker run --rm -it --link redis:redis --link mongo:mongodb --link elastic:elastic -e NODE_ENV=production -p 2000:2000 -v ~/logs:/server/logs -v ~/config:/server/config xtralife/xtralife-server`
+
+`~/config` must contain a copy (customized) of `./config` for this command to run. 
+`~/logs` will contain log files
