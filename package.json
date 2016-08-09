@@ -1,0 +1,41 @@
+{
+  "name": "xtralife-server",
+  "version": "3.2.0",
+  "description": "Xtralife-server is a full blown gaming backend",
+  "scripts": {
+    "start": "node master.js"
+  },
+  "keywords": [
+    "backend",
+    "gaming"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xtralifecloud/xtralife-server.git"
+  },
+  "author": "devteam <devteam@xtralife.cloud>",
+  "license": "(C) Xtralife.cloud, 2015",
+  "engines": {
+    "node": ">=6.2.2"
+  },
+  "dependencies": {
+    "async": "*",
+    "bluebird": "*",
+    "coffee-script": "*",
+    "coffee-script-mapped": "*",
+    "xtralife-env": "<3.3",
+    "xtralife-http": "<3.3",
+    "elasticsearch": "11",
+    "extend": "*",
+    "moment": "*",
+    "mongodb": "2.1",
+    "node-logentries": "*",
+    "nodemailer": "*",
+    "nodemailer-sendgrid-transport": "*",
+    "randomstring": "*",
+    "redis": "*",
+    "redis-sentinel": "*",
+    "request": "*",
+    "winston": "*"
+  }
+}
