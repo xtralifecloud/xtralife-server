@@ -1335,9 +1335,9 @@
       "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz"
     },
     "xtralife-api": {
-      "version": "3.2.1",
+      "version": "3.2.2",
       "from": "xtralife-api@<3.3.0",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.2.1.tgz",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.2.2.tgz",
       "dependencies": {
         "async": {
           "version": "1.5.2",
