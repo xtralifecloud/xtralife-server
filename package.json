@@ -34,7 +34,7 @@
     "nodemailer-sendgrid-transport": "*",
     "randomstring": "*",
     "redis": "*",
-    "redis-sentinel": "*",
+    "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel",
     "request": "*",
     "winston": "*"
   }
