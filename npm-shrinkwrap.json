@@ -1422,9 +1422,9 @@
       "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz"
     },
     "xtralife-api": {
-      "version": "3.2.2",
+      "version": "3.2.3",
       "from": "xtralife-api@latest",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.2.2.tgz",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.2.3.tgz",
       "dependencies": {
         "async": {
           "version": "1.5.2",
@@ -1439,9 +1439,9 @@
       "resolved": "https://registry.npmjs.org/xtralife-env/-/xtralife-env-3.0.0.tgz"
     },
     "xtralife-http": {
-      "version": "3.2.0",
+      "version": "3.2.2",
       "from": "xtralife-http@<3.3.0",
-      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.2.0.tgz"
+      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.2.2.tgz"
     },
     "xtralife-msg": {
       "version": "3.2.0",
