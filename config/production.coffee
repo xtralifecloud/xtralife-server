@@ -2,24 +2,67 @@ os = require 'os'
 nodemailer = require "nodemailer"
 sendgrid = require "nodemailer-sendgrid-transport"
 
+xlenv = require "xtralife-env"
+
+# required to support Redis Sentinel HA
+Q = require 'bluebird'
+Sentinel = require 'redis-sentinel'
+Redis = require 'redis'
+Q.promisifyAll(Redis.RedisClient.prototype)
+Q.promisifyAll(Redis.Multi.prototype)
+
+Sentinel.redis = Redis
+
 module.exports =
 
-	nbworkers: 1 # start only one worker, regardless of cpu count
+	nbworkers: 0 # start only one worker, regardless of cpu count
 	logs:
 		level: 'debug'
 
-	redis:
-		host: process.env.REDIS_PORT_6379_TCP_ADDR
-		port: process.env.REDIS_PORT_6379_TCP_PORT
+	sentinel:
+		endpoints: [{host:"ip-172-31-42-215.eu-west-3.compute.internal", port:26379},{host:"ip-172-31-35-200.eu-west-3.compute.internal", port:26379}, {host:"ip-172-31-43-24.eu-west-3.compute.internal", port:26379}]
+
+	redisClient: (cb)->
+		client = Sentinel.createClient(xlenv.sentinel.endpoints, "mymaster",{})
+		client.info (err)->
+			cb err, client
+
+	redisChannel: (cb)->
+		client = Sentinel.createClient(xlenv.sentinel.endpoints, "mymaster",{})
+		client.info (err)->
+			cb err, client
+
+	redisStats: (cb)->
+		client = Sentinel.createClient(xlenv.sentinel.endpoints, "mymaster",{})
+		client.info (err)->
+			client.select 10
+			cb err, client
 
 	mongodb:
-		url: "mongodb://#{process.env.MONGODB_PORT_27017_TCP_ADDR}:#{process.env.MONGODB_PORT_27017_TCP_PORT}/?maxPoolSize=25"
+		url: "mongodb://ip-172-31-42-215.eu-west-3.compute.internal,ip-172-31-35-200.eu-west-3.compute.internal/?replicaSet=backend&maxPoolSize=25"
+		options: # see http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html
+			db:
+				w: 1
+				readPreference: "primary"
+
+			server:
+				auto_reconnect: true
+
+			replSet:
+				rs_name: "backend"
+
+			mongos: {}
+			promiseLibrary: require 'bluebird'
 
 	elastic: (cb)->
 		elastic = require("elasticsearch")
 		client = new elastic.Client
-			host: "http://#{process.env.ELASTIC_PORT_9200_TCP_ADDR}:#{process.env.ELASTIC_PORT_9200_TCP_PORT}"
+			hosts: [{host: "ip-172-31-42-215.eu-west-3.compute.internal", port:9200}, {host: "ip-172-31-35-200.eu-west-3.compute.internal", port:9200}, {host: "ip-172-31-47-156.eu-west-1.compute.internal", port:9200}]
+			keepAlive: true
+			maxSockets: 50
+			sniffInterval: 5*1000
 		cb null, client
+
 
 	mailer: nodemailer.createTransport(sendgrid(
 		auth: # CONFIGURE ACCESS TO SENDGRID
@@ -27,13 +70,13 @@ module.exports =
 			api_key: "CONFIGURE"
 	))
 
-	privateKey: "CONFIGURE : This is a private key and you should customize it"
+	privateKey: "KFhbLpzzy0cNN31im3vrrvWbNPiUbj"
 
 	AWS: # CONFIGURE ACCESS TO YOUR AWS S3 BUCKET
 		S3:
 			bucket: null
 			credentials:
-				region: null
+				region: "eu-west-3"
 				accessKeyId: null
 				secretAccessKey: null
 				
