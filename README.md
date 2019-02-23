@@ -13,7 +13,7 @@ Redis, Mongodb and Elasticsearch are all required to run Xtralife-server.
 ```
 docker run --name redis -d -p 6378:6379 redis
 docker run --name mongo -d -p 27018:27017 mongo
-docker run --name elastic -d -p 9200:9200 elasticsearch
+docker run --name elastic -d -p 9200:9200 elasticsearch:2
 ```
 
 The default TCP ports specified in `config/dev.coffee` are non-standard for redis and mongodb, to avoid any confusion between dev and production environments.
