@@ -19,23 +19,23 @@
     "node": ">=6.2.2"
   },
   "dependencies": {
-    "async": "*",
-    "bluebird": "*",
-    "coffee-script": "*",
+    "async": "^3.1.0",
+    "bluebird": "^3.5.5",
+    "coffee-script": "^1.12.7",
     "coffee-script-mapped": "*",
-    "xtralife-env": "<3.3",
-    "xtralife-http": "<3.3",
     "elasticsearch": "11",
-    "extend": "*",
-    "moment": "*",
-    "mongodb": "2.1",
+    "extend": "^3.0.2",
+    "moment": "^2.24.0",
+    "mongodb": "2.2.36",
     "node-logentries": "*",
-    "nodemailer": "*",
+    "nodemailer": "^6.2.1",
     "nodemailer-sendgrid-transport": "*",
     "randomstring": "*",
-    "redis": "*",
-    "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel",
-    "request": "*",
-    "winston": "*"
+    "redis": "^2.8.0",
+    "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel.git",
+    "request": "^2.88.0",
+    "winston": "^3.2.1",
+    "xtralife-env": "<3.3",
+    "xtralife-http": "<3.3"
   }
 }
