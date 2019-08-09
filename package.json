@@ -28,7 +28,7 @@
     "moment": "^2.24.0",
     "mongodb": "3.2",
     "node-logentries": "*",
-    "nodemailer": "^6.2.1",
+    "nodemailer": "^6.3.0",
     "nodemailer-sendgrid-transport": "*",
     "randomstring": "*",
     "redis": "^2.8.0",
@@ -36,6 +36,6 @@
     "request": "^2.88.0",
     "winston": "^3.2.1",
     "xtralife-env": "3",
-    "xtralife-http": "^3.3.0"
+    "xtralife-http": "*"
   }
 }
