@@ -1981,9 +1981,9 @@
       "integrity": "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
     },
     "xtralife-api": {
-      "version": "3.3.3",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.3.tgz",
-      "integrity": "sha512-17RaNQcA8OYYBIEOuDdrO/YRZdzUs3sAWJ304bKAxk03naBqEh1xQOf3lo+vKmM0KzpgYS6tpDwWbqx9fzwWwg==",
+      "version": "3.3.4",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.4.tgz",
+      "integrity": "sha512-GxlYpLs8RBfUClkUL5FLZf8spuQBSPDvuj0X8JKQGaqT0m1g+iFJ5+Y8Rvth7v4rTPjTnt7rrVN/F9WcfCKO4g==",
       "requires": {
         "apn": "^1.7.7",
         "async": "<2",
