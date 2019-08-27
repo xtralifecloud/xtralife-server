@@ -88,9 +88,9 @@
       "integrity": "sha1-x57Zf380y48robyXkLzDZkdLS3k="
     },
     "aws-sdk": {
-      "version": "2.517.0",
-      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.517.0.tgz",
-      "integrity": "sha512-CX0b+8StmzAGQOP5eoBYJExpjTdPeVPig3NC4crq71/0LkrIDGcc6ekVEl0Rx23WTyGDzExeDD1be1HvQNwHdA==",
+      "version": "2.518.0",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.518.0.tgz",
+      "integrity": "sha512-hwtKKf93TFyd3qugDW54ElpkUXhPe+ArPIHadre6IAFjCJiv08L8DaZKLRyclDnKfTavKe+f/PhdSEYo1QUHiA==",
       "requires": {
         "buffer": "4.9.1",
         "events": "1.1.1",
@@ -966,8 +966,7 @@
     },
     "lodash": {
       "version": "4.17.11",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz",
-      "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
+      "resolved": ""
     },
     "lodash-compat": {
       "version": "3.10.2",
@@ -2042,9 +2041,9 @@
       }
     },
     "xtralife-http": {
-      "version": "3.3.2",
-      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.2.tgz",
-      "integrity": "sha512-YPcS+XhOH9WILVy95rPGsf4W74BZAyVkoThWPBUQZJuW+9CTJ54UJ411aSg8rde/aRIIpTRU0PBAqD0rwHcPYQ==",
+      "version": "3.3.3",
+      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.3.tgz",
+      "integrity": "sha512-7NNn0W3zE6g0Q1c+nHLaQLNgg+N3C3Bcm3MkG4H+laIhRZ3LzRh187fU8Qs0P99Wqg1bhcqU0vSWKhfF+NXsjw==",
       "requires": {
         "basic-auth": "*",
         "bluebird": "*",
