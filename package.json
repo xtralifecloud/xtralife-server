@@ -35,7 +35,8 @@
     "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel.git",
     "request": "^2.88.0",
     "winston": "^3.2.1",
+    "xtralife-api": "^3.3.9",
     "xtralife-env": "3",
-    "xtralife-http": "*"
+    "xtralife-http": "^3.3.4"
   }
 }

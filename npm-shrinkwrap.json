@@ -966,7 +966,8 @@
     },
     "lodash": {
       "version": "4.17.11",
-      "resolved": ""
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.11.tgz",
+      "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
     },
     "lodash-compat": {
       "version": "3.10.2",
@@ -1980,9 +1981,9 @@
       "integrity": "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
     },
     "xtralife-api": {
-      "version": "3.3.7",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.7.tgz",
-      "integrity": "sha512-bSwvPQKm40VnZ77yQN3eE5PQ6PvQ+/Uq6FshIdTOHMslran5t8zJzd7h30nmiHzYpz3Nu735xmQSN1YKWOMZkg==",
+      "version": "3.3.9",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.9.tgz",
+      "integrity": "sha512-9RdYUpWkqScPrkJ8pPr61ZFUrotKjAdEL3Alw0OGjaqGs4HfiSdPLSlLX685S2UGuT3EeR8FdEzrvqjsCND1Ow==",
       "requires": {
         "apn": "^1.7.7",
         "async": "<2",
@@ -2041,9 +2042,9 @@
       }
     },
     "xtralife-http": {
-      "version": "3.3.3",
-      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.3.tgz",
-      "integrity": "sha512-7NNn0W3zE6g0Q1c+nHLaQLNgg+N3C3Bcm3MkG4H+laIhRZ3LzRh187fU8Qs0P99Wqg1bhcqU0vSWKhfF+NXsjw==",
+      "version": "3.3.4",
+      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.4.tgz",
+      "integrity": "sha512-1xfXJ6wpHtNhguQCQZ5wtjJ70kMJH5EfRZ9f8/bP/Ab8L0xHYtnIybNZGq+HS2+TGPlVocoxRkS32CA+ey700A==",
       "requires": {
         "basic-auth": "*",
         "bluebird": "*",
