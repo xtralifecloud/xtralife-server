@@ -23,7 +23,7 @@
     "bluebird": "^3.5.5",
     "coffee-script": "^1.12.7",
     "coffee-script-mapped": "*",
-    "elasticsearch": "11",
+    "elasticsearch": "^12.1.3",
     "extend": "^3.0.2",
     "moment": "^2.24.0",
     "mongodb": "3.2",
@@ -35,8 +35,8 @@
     "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel.git",
     "request": "^2.88.0",
     "winston": "^3.2.1",
-    "xtralife-api": "^3.3.9",
+    "xtralife-api": "^3.3.10",
     "xtralife-env": "3",
-    "xtralife-http": "^3.3.4"
+    "xtralife-http": "^3.3.5"
   }
 }
