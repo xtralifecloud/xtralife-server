@@ -88,9 +88,9 @@
       "integrity": "sha1-x57Zf380y48robyXkLzDZkdLS3k="
     },
     "aws-sdk": {
-      "version": "2.568.0",
-      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.568.0.tgz",
-      "integrity": "sha512-jPvhiJV2iLyWbJJDM01gvUCzeChWUeRMkIr6dsHu+leH2QnzvGNunTwMGculKE1jouXatajZEoA9bdqfosranw==",
+      "version": "2.574.0",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.574.0.tgz",
+      "integrity": "sha512-EUSZ+c6nav2hoF8ALCGBCVRv/QYFqLbaktqgfbSm7Ewh3/6vPCo7aMTxsQJJ+7ceUKaUNhQY/qqnwd5ZxIrXmQ==",
       "requires": {
         "buffer": "^4.9.1",
         "events": "^1.1.1",
@@ -762,9 +762,9 @@
       }
     },
     "has-symbols": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.0.tgz",
-      "integrity": "sha1-uhqPGvKg/DllD1yFA2dwQSIGO0Q="
+      "version": "1.0.1",
+      "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.1.tgz",
+      "integrity": "sha512-PLcsoqu++dmEIZB+6totNFKq/7Do+Z0u4oT0zKOJNl3lYK6vGwwu2hjHs+68OEZbTjiUE9bgOABXbP/GvrS0Kg=="
     },
     "http-errors": {
       "version": "1.7.2",
@@ -2001,9 +2001,9 @@
       "integrity": "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
     },
     "xtralife-api": {
-      "version": "3.3.11",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.11.tgz",
-      "integrity": "sha512-AQBj+1RuumpKexDAz2PJzPOlv/qoijBTtH4Vv5qGdNlIbz2optuzH5zZEQjseH5WYkGnJi6gjG3mHX9LTTTmXw==",
+      "version": "3.3.12",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.12.tgz",
+      "integrity": "sha512-ViQD6deXMz9QaCjKmPZGF7++vgOrhK3e/+BrNUrA7A6GNKvk5grFUarJ46rb9925J0ZBTCgeX6FSOxoj4LZC9Q==",
       "requires": {
         "apn": "^1.7.7",
         "async": "<2",
