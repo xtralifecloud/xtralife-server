@@ -524,12 +524,11 @@
       "integrity": "sha512-zoB603vQReOFvTg5xMl9I1P2PnHsHQQKTEowsKKD7nseUfJq6UWzK+4YtlWUO1nhiQUxe6XMkk+JleSZD1NZFA=="
     },
     "error": {
-      "version": "7.0.2",
-      "resolved": "https://registry.npmjs.org/error/-/error-7.0.2.tgz",
-      "integrity": "sha1-pfdf/02ZJhJt2sDqXcOOaJFTywI=",
+      "version": "7.2.1",
+      "resolved": "https://registry.npmjs.org/error/-/error-7.2.1.tgz",
+      "integrity": "sha512-fo9HBvWnx3NGUKMvMwB/CBCMMrfEJgbDTVDEkPygA3Bdd3lM1OyCd+rbQ8BwnpF6GdVeOLDNmyL4N5Bg80ZvdA==",
       "requires": {
-        "string-template": "~0.2.1",
-        "xtend": "~4.0.0"
+        "string-template": "~0.2.1"
       }
     },
     "es-abstract": {
@@ -1266,11 +1265,6 @@
       "resolved": "https://registry.npmjs.org/node-logentries/-/node-logentries-0.1.4.tgz",
       "integrity": "sha1-GguZZ5tieWLckLxpilwSlXZ0r8E="
     },
-    "node-uuid": {
-      "version": "1.4.8",
-      "resolved": "https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.8.tgz",
-      "integrity": "sha1-sEDrCSOWivq/jTL7HxfxFn/auQc="
-    },
     "nodemailer": {
       "version": "6.3.0",
       "resolved": "https://registry.npmjs.org/nodemailer/-/nodemailer-6.3.0.tgz",
@@ -1995,11 +1989,6 @@
       "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-11.0.1.tgz",
       "integrity": "sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA=="
     },
-    "xtend": {
-      "version": "4.0.2",
-      "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz",
-      "integrity": "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
-    },
     "xtralife-api": {
       "version": "3.3.12",
       "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.12.tgz",
@@ -2062,9 +2051,9 @@
       }
     },
     "xtralife-http": {
-      "version": "3.3.5",
-      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.5.tgz",
-      "integrity": "sha512-8t2inlO4dEjwK3t4c8IXEILaLfRjHTQJ+1NElBLK2BS0eSiJBlPxokkM2kWOxAKQPMotmaWASEwBvtpT1HGUpg==",
+      "version": "3.3.6",
+      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.6.tgz",
+      "integrity": "sha512-q7Q5o1gSgM1o7iudTpAA2otWQABSAHekE9bcUH89xMvmRGBw84h26YvJKXjeELoQG0/n6FfleQCA5byn8g6HBw==",
       "requires": {
         "basic-auth": "*",
         "bluebird": "*",
@@ -2082,6 +2071,13 @@
         "underscore": "*",
         "xtralife-api": "*",
         "xtralife-msg": "*"
+      },
+      "dependencies": {
+        "node-uuid": {
+          "version": "1.4.8",
+          "resolved": "https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.8.tgz",
+          "integrity": "sha1-sEDrCSOWivq/jTL7HxfxFn/auQc="
+        }
       }
     },
     "xtralife-msg": {
@@ -2104,9 +2100,9 @@
       }
     },
     "yallist": {
-      "version": "3.0.3",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-3.0.3.tgz",
-      "integrity": "sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A=="
+      "version": "3.1.1",
+      "resolved": "https://registry.npmjs.org/yallist/-/yallist-3.1.1.tgz",
+      "integrity": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g=="
     }
   }
 }
