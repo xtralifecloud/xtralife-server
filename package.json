@@ -37,6 +37,6 @@
     "winston": "^3.2.1",
     "xtralife-api": "^3.3.13",
     "xtralife-env": "3",
-    "xtralife-http": "^3.3.6"
+    "xtralife-http": "^3.3.7"
   }
 }

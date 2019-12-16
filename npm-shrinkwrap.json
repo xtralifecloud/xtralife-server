@@ -1940,9 +1940,9 @@
       }
     },
     "xtralife-http": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.6.tgz",
-      "integrity": "sha512-q7Q5o1gSgM1o7iudTpAA2otWQABSAHekE9bcUH89xMvmRGBw84h26YvJKXjeELoQG0/n6FfleQCA5byn8g6HBw==",
+      "version": "3.3.7",
+      "resolved": "https://registry.npmjs.org/xtralife-http/-/xtralife-http-3.3.7.tgz",
+      "integrity": "sha512-rZO5ZbrXbrAhxk9d9FWlBJzAfIVOliLKlAeKWYGSYuJoA9uKgs0Ufe7SaP1UJHy6GQbr8V+bdh9CKjfXwdQ5iQ==",
       "requires": {
         "basic-auth": "*",
         "bluebird": "*",
