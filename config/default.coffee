@@ -63,6 +63,7 @@ module.exports = configuration =
 			return cb(err, mongodb)
 
 	options:
+		disableIndexModule: false
 		notifyUserOnBrokerTimeout: true
 		removeUser: true # should we allow removing a user ?
 
