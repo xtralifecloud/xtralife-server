@@ -88,9 +88,9 @@
       "integrity": "sha1-x57Zf380y48robyXkLzDZkdLS3k="
     },
     "aws-sdk": {
-      "version": "2.687.0",
-      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.687.0.tgz",
-      "integrity": "sha512-gUIL4YXWdg3dv1QJMs0PCLpaHRe4DtPIYgRh3PPLJHnbIETLQdiA98co6qthAXIIWKx2hET4d1BhnAlAp77zQw==",
+      "version": "2.695.0",
+      "resolved": "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.695.0.tgz",
+      "integrity": "sha512-U23kAGiMO85deOc1VOgBhEe6Trvl5qHijymEPIGXwlPgncp/Pk3qzKVQDsBgRaPYiBq/twksGfLSDVAAY2liKg==",
       "requires": {
         "buffer": "4.9.2",
         "events": "1.1.1",
@@ -1879,9 +1879,9 @@
       "integrity": "sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0="
     },
     "xtralife-api": {
-      "version": "3.3.15",
-      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.15.tgz",
-      "integrity": "sha512-NvtKY08NQ8GzIqv/5ce52yAfL8FrcT2lyQUygfFcSTc4dDhxH14g02qshCkDJPeIotHRe+ky+8b3GwRjJZrasw==",
+      "version": "3.3.16",
+      "resolved": "https://registry.npmjs.org/xtralife-api/-/xtralife-api-3.3.16.tgz",
+      "integrity": "sha512-18JV1BDbtcGY1giXYA9mX0u1q5CesHEfbQxqKhfzYLV6tzFKTL0gICr0Ga4oDqcYLRBAn914ZLR81Y4Gs8jicw==",
       "requires": {
         "apn": "^1.7.7",
         "async": "<2",
