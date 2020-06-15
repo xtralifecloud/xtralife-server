@@ -9,8 +9,8 @@ const util = require('util');
 const xlenv = require("xtralife-env");
 const env = process.env.NODE_ENV || 'dev';
 
-const Q = require('bluebird');
-Q.promisifyAll(require('redis'));
+const Promise = require('bluebird');
+Promise.promisifyAll(require('redis'));
 
 module.exports = (configuration = {
 	nbworkers : 0, // 0 means one worker per CPU
@@ -62,16 +62,11 @@ module.exports = (configuration = {
 		dbname: 'xtralife',
 
 		options: { // see http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html
-			db: {
-				w: 1,
-				readPreference: "primaryPreferred"
-			},
-
-			server: {
-				auto_reconnect: true
-			},
-
-			promiseLibrary: require('bluebird')
+			w: 1,
+			readPreference: "primaryPreferred",
+			auto_reconnect: true,
+			promiseLibrary: require('bluebird'),
+			useUnifiedTopology: true
 		}
 	},
 

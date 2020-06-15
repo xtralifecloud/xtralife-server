@@ -1,10 +1,10 @@
-FROM node:10.16
+FROM node:12
 
 RUN mkdir -p /server
 WORKDIR /server
 
 COPY package.json /server/
-COPY npm-shrinkwrap.json /server/
+COPY package-lock.json /server/
 
 RUN npm install
 
