@@ -11,6 +11,7 @@ RUN npm install
 COPY . /server
 
 EXPOSE 2000
+EXPOSE 10254
 
 VOLUME ["/server/config", "/server/logs"]
 
