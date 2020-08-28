@@ -37,7 +37,7 @@ process.on('uncaughtException', function (err) {
 		process.send({ cmd: 'uncaughtException', info: `uncaughtException :\n${err}\nstack : ${err.stack}` });
 
 		console.log("Rocket quitting because of uncaught exception");
-		return process.exit();
+		return process.exit(1);
 	}
 });
 
