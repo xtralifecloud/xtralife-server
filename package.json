@@ -31,7 +31,7 @@
     "nodemailer": "^6.3.0",
     "nodemailer-sendgrid-transport": "*",
     "randomstring": "*",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "redis-sentinel": "git://github.com/xtralifecloud/node-redis-sentinel.git",
     "request": "^2.88.0",
     "winston": "^3.2.1",
