@@ -11,7 +11,6 @@ const cluster = require('cluster');
 global.xlenv = require("xtralife-env");
 const os = require("os");
 const fs = require("fs");
-const extend = require("extend");
 const nodemailer = require("nodemailer");
 const sendgrid = require("nodemailer-sendgrid-transport");
 const moment = require("moment");

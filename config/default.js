@@ -64,7 +64,6 @@ module.exports = (configuration = {
 		options: { // see http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html
 			w: 1,
 			readPreference: "primaryPreferred",
-			auto_reconnect: true,
 			promiseLibrary: require('bluebird'),
 			useUnifiedTopology: true
 		}
