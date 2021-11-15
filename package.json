@@ -27,7 +27,7 @@
     "nodemailer-sendgrid-transport": "^0.2.0",
     "redis": "^3.1.2",
     "winston": "^3.3.3",
-    "xtralife-http": "^4.0.0-beta3",
-    "xtralife-env": "^4.0.0-alpha"
+    "xtralife-http": "^4.0.0",
+    "xtralife-env": "^4.0.0"
   }
 }
