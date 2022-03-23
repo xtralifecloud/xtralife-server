@@ -76,8 +76,8 @@ module.exports = {
 							key: ''
 						}
 					}, //CONFIGURE
-					socialSettings: {
-						facebookAppToken : ''
+					facebook: {
+						useBusinessManager : false
 					}
 				}
 			}, // CONFIGURE
@@ -109,8 +109,8 @@ module.exports = {
 						}
 					}, // CONFIGURE
 
-					socialSettings: {
-						facebookAppToken : ''
+					facebook: {
+						useBusinessManager : false
 					}
 				}
 			}
