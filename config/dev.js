@@ -49,15 +49,6 @@ module.exports = {
 		}
 	},
 
-	firebase: { // CONFIGURE FIREBASE CREDENTIALS
-		type: null,
-		project_id: null,
-		private_key_id: null,
-		private_key: null,
-		client_email: null,
-		client_id: null,
-	},
-
 	xtralife: {
 		games: {
 			"com.clanofthecloud.testgame": { 
@@ -84,8 +75,22 @@ module.exports = {
 							key: ''
 						}
 					}, //CONFIGURE
+					
 					facebook: {
 						useBusinessManager : false
+					},
+
+					google: {
+						clientID: '' //CONFIGURE
+					},
+
+					firebase: { // CONFIGURE FIREBASE CREDENTIALS
+						type: '',
+						project_id: '',
+						private_key_id: '',
+						private_key: '',
+						client_email: '',
+						client_id: ''
 					}
 				}
 			}, // CONFIGURE
@@ -123,6 +128,15 @@ module.exports = {
 
 					google: {
 						clientID: '' //CONFIGURE
+					},
+
+					firebase: { // CONFIGURE FIREBASE CREDENTIALS
+						type: '',
+						project_id: '',
+						private_key_id: '',
+						private_key: '',
+						client_email: '',
+						client_id: ''
 					}
 				}
 			}
