@@ -49,6 +49,15 @@ module.exports = {
 			}
 		}
 	},
+
+	firebase: { // CONFIGURE FIREBASE CREDENTIALS
+		type: null,
+		project_id: null,
+		private_key_id: null,
+		private_key: null,
+		client_email: null,
+		client_id: null,
+	},
 				
 	xtralife: {
 		games: {
