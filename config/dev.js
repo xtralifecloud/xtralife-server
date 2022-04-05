@@ -77,7 +77,16 @@ module.exports = {
 					}, //CONFIGURE
 					facebook: {
 						useBusinessManager : false
-					}
+					},
+
+					google: {
+						clientID: '' //CONFIGURE
+					},
+
+					steam: {
+						appId: '', //CONFIGURE
+						webApiKey: '' //CONFIGURE
+					},
 				}
 			}, // CONFIGURE
 
@@ -114,7 +123,12 @@ module.exports = {
 
 					google: {
 						clientID: '' //CONFIGURE
-					}
+					},
+
+					steam: {
+						appId: '', //CONFIGURE
+						webApiKey: '' //CONFIGURE
+					},
 				}
 			}
 		}
