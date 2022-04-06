@@ -78,6 +78,19 @@ module.exports = {
 					}, //CONFIGURE
 					facebook: {
 						useBusinessManager : false
+					},
+
+					google: {
+						clientID: '' //CONFIGURE
+					},
+
+					firebase: { // CONFIGURE FIREBASE CREDENTIALS
+						type: '',
+						project_id: '',
+						private_key_id: '',
+						private_key: '',
+						client_email: '',
+						client_id: ''
 					}
 				}
 			}, // CONFIGURE
@@ -115,6 +128,15 @@ module.exports = {
 
 					google: {
 						clientID: '' //CONFIGURE
+					},
+
+					firebase: { // CONFIGURE FIREBASE CREDENTIALS
+						type: '',
+						project_id: '',
+						private_key_id: '',
+						private_key: '',
+						client_email: '',
+						client_id: ''
 					}
 				}
 			}
