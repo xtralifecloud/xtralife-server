@@ -91,7 +91,12 @@ module.exports = {
 						private_key: '',
 						client_email: '',
 						client_id: ''
-					}
+					},
+					
+					steam: {
+						appId: '', //CONFIGURE
+						webApiKey: '' //CONFIGURE
+					},
 				}
 			}, // CONFIGURE
 
@@ -137,7 +142,12 @@ module.exports = {
 						private_key: '',
 						client_email: '',
 						client_id: ''
-					}
+					},
+					
+					steam: {
+						appId: '', //CONFIGURE
+						webApiKey: '' //CONFIGURE
+					},
 				}
 			}
 		}
