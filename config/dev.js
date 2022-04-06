@@ -110,6 +110,10 @@ module.exports = {
 
 					facebook: {
 						useBusinessManager : false
+					},
+
+					google: {
+						clientID: '' //CONFIGURE
 					}
 				}
 			}
