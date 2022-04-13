@@ -86,17 +86,22 @@ module.exports = {
 
 					firebase: { // CONFIGURE FIREBASE CREDENTIALS
 						type: '',
-						project_id: '',
-						private_key_id: '',
-						private_key: '',
-						client_email: '',
-						client_id: ''
+  						project_id: '',
+  						private_key_id: '',
+  						private_key: '',
+  						client_email: '',
+  						client_id: '',
 					},
 					
 					steam: {
-						appId: '', //CONFIGURE
+						appId: null, //CONFIGURE
 						webApiKey: '' //CONFIGURE
 					},
+
+					apple: {
+						bundleID: '', //CONFIGURE
+						gameCenterBundleIdRE: null, //CONFIGURE
+					}
 				}
 			}, // CONFIGURE
 
@@ -150,7 +155,7 @@ module.exports = {
 					},
 
 					apple: {
-						clientID: '', //CONFIGURE
+						bundleID: '', //CONFIGURE
 						gameCenterBundleIdRE: null, //CONFIGURE
 					}
 				}
