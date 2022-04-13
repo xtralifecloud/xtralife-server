@@ -99,7 +99,9 @@ module.exports = (configuration = {
 		// it must be limited because of read/write amplification
 		maxReceptientsForEvent: 10,
 
-		hostnameBlacklist: ['localhost', '127.0.0.1']
+		hostnameBlacklist: ['localhost', '127.0.0.1'],
+
+		gameCenterTokenMaxAge: 60 * 60 * 24 * 7, // 1 week (seconds)
 	},
 
 	metrics: {
