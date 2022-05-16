@@ -42,8 +42,8 @@ module.exports = {
 	AWS: { // CONFIGURE ACCESS TO YOUR AWS S3 BUCKET
 		S3: {
 			bucket: null,
+			region: null,
 			credentials: {
-				region: null,
 				accessKeyId: null,
 				secretAccessKey: null
 			}
