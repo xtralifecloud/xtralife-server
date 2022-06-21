@@ -1,14 +1,5 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
 let configuration;
-const os = require('os');
-const util = require('util');
 const xlenv = require("xtralife-env");
-const env = process.env.NODE_ENV || 'dev';
-
 const Promise = require('bluebird');
 Promise.promisifyAll(require('redis'));
 
@@ -64,14 +55,18 @@ module.exports = (configuration = {
 		options: { // see http://mongodb.github.io/node-mongodb-native/driver-articles/mongoclient.html
 			w: 1,
 			readPreference: "primaryPreferred",
-			promiseLibrary: require('bluebird'),
 			useUnifiedTopology: true
 		}
 	},
 
-
 	mongoCx(cb){
 		return require("mongodb").MongoClient.connect(xlenv.mongodb.url, xlenv.mongodb.options, (err, mongodb) => cb(err, mongodb));
+	},
+
+	elastic(cb){
+		const elastic = require("elasticsearch");
+		const client = new elastic.Client(); // defaults to localhost
+		return cb(null, client);
 	},
 
 	options: {
@@ -140,16 +135,8 @@ module.exports = (configuration = {
 	},
 
 	hooks: {
-		definitions: {},
 		functions: { // CONFIGURE YOUR BATCHES / HOOKS for each domain
 			"youdomain.com": require('./batches/yourdomain.js')
 		}
 	},
-
-	elastic(cb){
-		const elastic = require("elasticsearch");
-		const client = new elastic.Client(); // defaults to localhost
-		client.sniff();
-		return cb(null, client);
-	}
 });

@@ -1,9 +1,3 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-const os = require('os');
 const nodemailer = require("nodemailer");
 const sendgrid = require("nodemailer-sendgrid-transport");
 
@@ -59,50 +53,56 @@ module.exports = {
 					enable:true,
 					domains:[],
 					eventedDomains:[],
-					certs: {
-						android: {
-							enable: false,
-							senderID: '', // CONFIGURE
-							apikey: ''
-						}, // CONFIGURE
-						ios: {
-							enable: false,
-							cert: '', // CONFIGURE
-							key: ''
-						}, // CONFIGURE
-						macos: {
-							enable: false,
-							cert: '', //CONFIGURE
-							key: ''
-						}
-					}, //CONFIGURE
-					
+
 					facebook: {
 						useBusinessManager : false
 					},
 
-					google: {
-						clientID: '' //CONFIGURE
+					google: { // see google cloud platform
+						clientID: '', // login
+						inApp: { // in-app purchase android
+							packageID: '',
+							serviceAccount: {
+								private_key_id: '',
+								client_email: '',
+								client_id: '',
+								type: 'service_account'
+							}
+						}
 					},
 
-					firebase: { // CONFIGURE FIREBASE CREDENTIALS
-						type: '',
-  						project_id: '',
-  						private_key_id: '',
-  						private_key: '',
-  						client_email: '',
-  						client_id: '',
-					},
-					
-					steam: {
-						appId: null, //CONFIGURE
-						webApiKey: '' //CONFIGURE
+					apple: { // see apple developer console
+						bundleID: '', // for login & apn
+						gameCenterBundleIdRE: null, // login
+						inApp: { // In-app
+						},
+						apn: { //apple push notification
+							token: { // apn auth key
+								key: "",
+								keyId: "",
+								teamId: "",
+							},
+							production: false,
+						}
 					},
 
-					apple: {
-						bundleID: '', //CONFIGURE
-						gameCenterBundleIdRE: null, //CONFIGURE
-					}
+					firebase: { // login & push Android (firebaseAdmin sdk), see firebase console
+						type: "",
+						project_id: "",
+						private_key_id: "",
+						private_key: "",
+						client_email: "",
+						client_id: "",
+						auth_uri: "",
+						token_uri: "",
+						auth_provider_x509_cert_url: "",
+						client_x509_cert_url: ""
+					},
+
+					steam: { // login
+						appId: null,
+						webApiKey: ''
+					},
 				}
 			}, // CONFIGURE
 
@@ -113,52 +113,56 @@ module.exports = {
 					enable:true,
 					domains:["com.clanofthecloud.cloudbuilder.m3Nsd85GNQd3","com.clanofthecloud.cloudbuilder.test"],
 					eventedDomains:["com.clanofthecloud.cloudbuilder.m3Nsd85GNQd3"],
-					certs: {
-						certs: {
-							android: {
-								enable: false,
-								senderID: '', // CONFIGURE
-								apikey: ''
-							}, // CONFIGURE
-							ios: {
-								enable: false,
-								cert: '', // CONFIGURE
-								key: ''
-							}, // CONFIGURE
-							macos: {
-								enable: false,
-								cert: '', // CONFIGURE
-								key: ''
-							}
-						}
-					}, // CONFIGURE
 
 					facebook: {
 						useBusinessManager : false
 					},
 
-					google: {
-						clientID: '' //CONFIGURE
+					google: { // see google cloud platform
+						clientID: '', // login
+						inApp: { // in-app purchase android
+							packageID: '',
+							serviceAccount: {
+								private_key_id: '',
+								client_email: '',
+								client_id: '',
+								type: 'service_account'
+							}
+						}
 					},
 
-					firebase: { // CONFIGURE FIREBASE CREDENTIALS
-						type: '',
-  						project_id: '',
-  						private_key_id: '',
-  						private_key: '',
-  						client_email: '',
-  						client_id: '',
-					},
-					
-					steam: {
-						appId: null, //CONFIGURE
-						webApiKey: '' //CONFIGURE
+					apple: { // see apple developer console
+						bundleID: '', // for login & apn
+						gameCenterBundleIdRE: null, // login
+						inApp: { // In-app
+						},
+						apn: { //apple push notification
+							token: { // apn auth key
+								key: "",
+								keyId: "",
+								teamId: "",
+							},
+							production: false,
+						}
 					},
 
-					apple: {
-						bundleID: '', //CONFIGURE
-						gameCenterBundleIdRE: null, //CONFIGURE
-					}
+					firebase: { // login & push Android (firebaseAdmin sdk), see firebase console
+						type: "",
+						project_id: "",
+						private_key_id: "",
+						private_key: "",
+						client_email: "",
+						client_id: "",
+						auth_uri: "",
+						token_uri: "",
+						auth_provider_x509_cert_url: "",
+						client_x509_cert_url: ""
+					},
+
+					steam: { // login
+						appId: null,
+						webApiKey: ''
+					},
 				}
 			}
 		}
@@ -166,8 +170,6 @@ module.exports = {
 
 
 	hooks: {
-		definitions: null,
-
 		functions: { // CONFIGURE YOUR BATCHES / HOOKS for each domain
 			"com.yourdomain.domainName": require('./batches/yourdomain.js'),
 			"com.clanofthecloud.cloudbuilder.azerty": require('./batches/integrationTests.js')["com.clanofthecloud.cloudbuilder.azerty"],
