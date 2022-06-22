@@ -1,14 +1,19 @@
 #xtralife server changelog
 
-## 4.2.3-beta
-xtralife-http: 4.1.3-beta </br>
-xtralife-api: 4.2.6-beta </br>
+## 4.2.3
+xtralife-http: 4.1.3 </br>
+xtralife-api: 4.2.6 </br>
 xtralife-env : 4.0.1 </br>
+xtralife-msg : 4.0.1 </br>
     
 - change GCM to FCM for Android push notifications
+- update APN service
 - add timestamp to user device token
 - remove user device token older than 1 month on login
 - add token param for device token registration on login
+- add message details on event route
+- allow no hook definition in config
+- prevent missing config for AWS
 
 ## 4.2.2
 xtralife-http: 4.1.2 </br>
