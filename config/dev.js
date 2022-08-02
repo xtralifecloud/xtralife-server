@@ -9,9 +9,15 @@ module.exports = {
 	},
 
 	redis: {
-		host: "localhost",
-		port: 6378
+		config: { // refer to https://github.com/redis/node-redis/blob/master/docs/client-configuration.md
+			socket: {
+				port: 6378,
+				host: 'localhost'
+			},
+		}
 	},
+
+
 
 	mongodb: {
 		url: "mongodb://localhost:27018/?maxPoolSize=5"
