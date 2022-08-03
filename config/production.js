@@ -17,10 +17,18 @@ module.exports = {
 		url: `mongodb://${process.env.MONGODB_PORT_27017_TCP_ADDR}:${process.env.MONGODB_PORT_27017_TCP_PORT}/?maxPoolSize=25`
 	},
 
-	elastic(cb){
-		const elastic = require("elasticsearch");
-		const client = new elastic.Client({
-			host: `http://${process.env.ELASTIC_PORT_9200_TCP_ADDR}:${process.env.ELASTIC_PORT_9200_TCP_PORT}`});
+	elastic(cb) {
+		const { Client } = require('@elastic/elasticsearch')
+		const client = new Client({
+			node: `https://${process.env.ELASTIC_PORT_9200_TCP_ADDR}:${process.env.ELASTIC_PORT_9200_TCP_PORT}` ,
+			tls: {
+				rejectUnauthorized: false
+			},
+			auth: {
+				username: process.env.ELASTIC_USERNAME,
+				password: process.env.ELASTIC_PASSWORD
+			}
+		})
 		return cb(null, client);
 	},
 

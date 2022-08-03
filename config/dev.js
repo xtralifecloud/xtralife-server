@@ -17,9 +17,18 @@ module.exports = {
 		url: "mongodb://localhost:27018/?maxPoolSize=5"
 	},
 
-	elastic(cb){
-		const elastic = require("elasticsearch");
-		const client = new elastic.Client();
+	elastic(cb) {
+		const { Client } = require('@elastic/elasticsearch')
+		const client = new Client({
+			node: 'https://localhost:9200' ,
+			tls: {
+				rejectUnauthorized: false
+			},
+			auth: {
+				username: 'elastic',
+				password: 'password'
+			}
+		})
 		return cb(null, client);
 	},
 
