@@ -102,11 +102,6 @@ module.exports = {
 						appId: null,
 						webApiKey: ''
 					},
-
-					epic: { // client credentials
-						clientId: '',
-						clientSecret: ''
-					},
 				}
 			}, // CONFIGURE
 
@@ -166,11 +161,6 @@ module.exports = {
 					steam: { // login
 						appId: null,
 						webApiKey: ''
-					},
-
-					epic: { // client credentials
-						clientId: '',
-						clientSecret: ''
 					},
 				}
 			}
