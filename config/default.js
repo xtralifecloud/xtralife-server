@@ -2,7 +2,7 @@ let configuration;
 const xlenv = require("xtralife-env");
 // const Promise = require('bluebird');
 // Promise.promisifyAll(require('redis'));
-const redis = require("redis");
+const Redis = require("ioredis");
 
 module.exports = (configuration = {
 	nbworkers : 0, // 0 means one worker per CPU
@@ -28,38 +28,31 @@ module.exports = (configuration = {
 	},
 
 	redis: {
-		config: { // refer to https://github.com/redis/node-redis/blob/master/docs/client-configuration.md
-			socket: {
-				port: null,
-				host: null
-			},
+		config: { // refer to https://github.com/luin/ioredis/blob/v4/API.md#new-redisport-host-options
+			port: null,
+			host: null
 		}
 	},
 
-	async redisClient(cb){
-		const client = await redis.createClient(xlenv.redis.config);
-		await client.connect();
-		const ready = await client.ping();
-		if (ready === 'PONG') {
-			return cb(null, client);
-		}
+	redisClient(cb){
+		const redis = new Redis(xlenv.redis.config);
+		redis.info((err) => {
+			return cb(err, redis);
+		})
 	},
 
-	async redisChannel(cb){
-		const client = await redis.createClient(xlenv.redis.config);
-		await client.connect();
-		const ready = await client.ping();
-		if (ready === 'PONG') {
-			return cb(null, client);
-		}
+	redisChannel(cb){
+		const redis = new Redis(xlenv.redis.config);
+		redis.info((err) => {
+			return cb(err, redis);
+		})
 	},
 
 	redisStats(cb){
-		const client = require('redis').createClient(xlenv.redis.port, xlenv.redis.host);
-		return client.info(function(err){
-			client.select(10);
-			return cb(err, client);
-		});
+		const redis = new Redis(xlenv.redis.config);
+		redis.info((err) => {
+			return cb(err, redis);
+		})
 	},
 
 	mongodb: {

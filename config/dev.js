@@ -9,15 +9,11 @@ module.exports = {
 	},
 
 	redis: {
-		config: { // refer to https://github.com/redis/node-redis/blob/master/docs/client-configuration.md
-			socket: {
-				port: 6378,
-				host: 'localhost'
-			},
+		config: { // refer to https://github.com/luin/ioredis/blob/v4/API.md#new-redisport-host-options
+			port: 6378,
+			host: 'localhost'
 		}
 	},
-
-
 
 	mongodb: {
 		url: "mongodb://localhost:27018/?maxPoolSize=5"
