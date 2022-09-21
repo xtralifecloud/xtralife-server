@@ -20,14 +20,7 @@ module.exports = {
 	elastic(cb) {
 		const { Client } = require('@elastic/elasticsearch')
 		const client = new Client({
-			node: 'https://localhost:9200' ,
-			tls: {
-				rejectUnauthorized: false
-			},
-			auth: {
-				username: 'elastic',
-				password: 'password'
-			}
+			node: 'http://localhost:9200' ,
 		})
 		return cb(null, client);
 	},
