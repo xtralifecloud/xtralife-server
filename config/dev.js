@@ -9,8 +9,10 @@ module.exports = {
 	},
 
 	redis: {
-		host: "localhost",
-		port: 6378
+		config: { // refer to https://github.com/luin/ioredis/blob/v4/API.md#new-redisport-host-options
+			port: 6378,
+			host: 'localhost'
+		}
 	},
 
 	mongodb: {

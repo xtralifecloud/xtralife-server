@@ -21,13 +21,13 @@
   "dependencies": {
     "@elastic/elasticsearch": "^5.6.22",
     "bluebird": "^3.7.2",
+    "ioredis": "^5.2.3",
     "moment": "^2.29.1",
     "mongodb": "^4.1.2",
     "nodemailer": "^6.6.5",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "redis": "^3.1.2",
     "winston": "^3.3.3",
-    "xtralife-env": "^4.0.0",
-    "xtralife-http": "^4.1.2"
+    "xtralife-http": "^4.1.2",
+    "xtralife-env": "^4.0.0"
   }
 }

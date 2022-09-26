@@ -35,6 +35,14 @@ module.exports = {
 		},
 		'__myscore': function () {
 			return this.leaderboard.score(this.game.getPrivateDomain(), params.user_id, 'batchboard', 'hightolow', params.request.value, params.request.info, false)
+		},
+		'__timers': function (params) {
+			this.timer.add(params.domain, params.user_id, { expirySeconds: 2, timerId: 'testTimer1', description: 'should be second', customData: { q: 1, verifKey: "test-1-1" } }, "timerTrigger")
+			this.timer.add(params.domain, params.user_id, { expirySeconds: 1, timerId: 'testTimer2', description: 'should be first', customData: { q: 1, verifKey: "test-1-2" } }, "timerTrigger")
+			return console.log("two timers added", new Date());
+		},
+		'__timerTrigger': function (params) {
+			return console.log("timerTrigger", params, new Date());
 		}
 	},
 
