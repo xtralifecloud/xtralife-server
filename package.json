@@ -19,7 +19,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^7.10.0",
+    "@elastic/elasticsearch": "7.10.0",
     "bluebird": "^3.7.2",
     "ioredis": "^5.2.3",
     "moment": "^2.29.1",
