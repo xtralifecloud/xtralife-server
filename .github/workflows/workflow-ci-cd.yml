@@ -1,0 +1,49 @@
+name: CI/CD Workflow
+run-name: ${{ github.ref_name }} release (${{ github.actor }}) > CI/CD Workflow
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  npm_publish:
+    name: Npm - Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repository
+        uses: actions/checkout@v3
+      - name: Setting up Node + package registry login config
+        uses: actions/setup-node@v3   # also creates a .npmrc file with registry login config inside the runner, which will use a npm automation token set in $NODE_AUTH_TOKEN env
+        with:
+          always-auth: true
+          cache: npm
+          cache-dependency-path: package-lock.json
+          node-version: 18.12.1
+          registry-url: https://registry.npmjs.org
+      - name: Package registry login + publish
+        run: npm publish   # will also login before publishing, using the config in .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  docker_build_push:
+    name: Docker - Build & Push
+    runs-on: ubuntu-latest
+    steps:
+      # - name: Checking out repository
+      #   uses: actions/checkout@v3   # no need to checkout as the build-push-action@v3 action will care about that
+      # - name: Setting up Docker QEMU
+      #   uses: docker/setup-qemu-action@v2   # add support for more platforms with QEMU (optional): https://github.com/docker/setup-qemu-action
+      - name: Setting up Docker Buildx
+        uses: docker/setup-buildx-action@v2   # add support for cache and building multi-platforms images (optional)
+      - name: Image registry login
+        uses: docker/login-action@v2
+        with:
+          username: ${{ vars.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_TOKEN }}   # safer to use a personal access token instead of a password: https://docs.docker.com/docker-hub/access-tokens/
+      - name: Building image + pushing image on the registry
+        uses: docker/build-push-action@v3
+        with:
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          push: true
+          tags: ${{ vars.DOCKER_IMAGE }}:${{ github.ref_name }}
