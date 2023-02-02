@@ -16,7 +16,7 @@
   "author": "devteam <devteam@xtralife.cloud>",
   "license": "(C) Xtralife.cloud, 2015",
   "engines": {
-    "node": ">=10"
+    "node": "^18.13.0"
   },
   "dependencies": {
     "@elastic/elasticsearch": "7.10.0",
