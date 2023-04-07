@@ -1,4 +1,4 @@
-FROM node:16.14.0
+FROM node:18.13.0
 
 RUN mkdir -p /server
 WORKDIR /server
