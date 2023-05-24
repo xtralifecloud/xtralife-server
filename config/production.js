@@ -19,7 +19,13 @@ module.exports = {
 		url: `mongodb://${process.env.MONGODB_PORT_27017_TCP_ADDR}:${process.env.MONGODB_PORT_27017_TCP_PORT}/?maxPoolSize=25`
 	},
 
-	elastic(cb) {
+	elastic: {
+		driver: {
+			version: "8.7.0",
+		}
+	},
+	
+	elasticClient(cb) {
 		const { Client } = require('@elastic/elasticsearch')
 		const client = new Client({
 			node: `https://${process.env.ELASTIC_PORT_9200_TCP_ADDR}:${process.env.ELASTIC_PORT_9200_TCP_PORT}` ,
