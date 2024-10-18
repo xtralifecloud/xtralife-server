@@ -64,20 +64,20 @@ module.exports = (configuration = {
 	},
 
 	mongoCx(cb) {
-		return require("mongodb").MongoClient.connect(xlenv.mongodb.url, xlenv.mongodb.options).then(client => {
-			cb(null, client);
-		}).catch(error => {
-			cb(error);
-		});
+		const { MongoClient } = require('mongodb');
+		const client = new MongoClient(xlenv.mongodb.url, xlenv.mongodb.options);
+		return client.connect()
+			.then(() => cb(null, client))
+			.catch(err => cb(err));
 	},
 
-	elastic: {
+	elasticConfig: {
 		driver: {
-			version: "8.7.0",
+			version: "8.8.0",
 		}
 	},
-	
-	elasticClient(cb) {
+
+	elastic(cb) {
 		const { Client } = require('@elastic/elasticsearch')
 		const client = new Client({
 			node: 'http://localhost:9200' ,

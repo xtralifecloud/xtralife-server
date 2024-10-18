@@ -10,22 +10,16 @@ module.exports = {
 
 	redis: {
 		config: { // refer to https://github.com/luin/ioredis/blob/v4/API.md#new-redisport-host-options
-			port: 6378,
+			port: 6379,
 			host: 'localhost'
 		}
 	},
 
 	mongodb: {
-		url: "mongodb://localhost:27018/?maxPoolSize=5"
+		url: "mongodb://localhost:27017/?maxPoolSize=5"
 	},
 
-	elastic: {
-		driver: {
-			version: "8.7.0",
-		}
-	},
-	
-	elasticClient(cb) {
+	elastic(cb) {
 		const { Client } = require('@elastic/elasticsearch')
 		const client = new Client({
 			node: 'http://localhost:9200' ,
