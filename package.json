@@ -1,6 +1,6 @@
 {
   "name": "xtralife-server",
-  "version": "4.4.5",
+  "version": "4.4.6",
   "description": "Xtralife-server is a full blown gaming backend",
   "scripts": {
     "start": "node index.js"
