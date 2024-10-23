@@ -52,7 +52,9 @@ xlenv.inject(['redisClient'], function (err, redis) {
 	if (err != null) { return logger.error(err.message, { stack: err.stack }); }
 	xlenv.redis.client = redis;
 
-	logger.info(`redisClient connected to ${xlenv.redis.config.host}:${xlenv.redis.config.port}`);
+	// TODO: In cluster case, works only with a single cluster config entry
+	const redisConfig = xlenv.redis.useCluster === true ? xlenv.redis.config[0] : xlenv.redis.config;
+	logger.info(`redisClient connected to ${redisConfig.host}:${redisConfig.port}`);
 	require("xtralife-http");
 
 	// Now that we're up and running, answer pings from our cluster master
